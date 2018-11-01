@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {css, injectGlobal} from 'react-emotion';
 import Futura from './fonts/Futura.ttc'; 
-import {CryptoApp} from './CryptoApp';
-import {CryptoAppFour} from './CryptoAppFour';
-import {CryptoAppTree} from './CryptoAppTree';
+import {WeatherApp} from './WeatherApp'; 
 
 
 injectGlobal`
@@ -21,58 +19,34 @@ const appStyle = css`
 
 const data = [
   {
-    name: 'Bitcoin', 
-    value: '752,22', 
-    percent: '0.34', 
-    marketCap: '122,568,750,852', 
-    circSupply: '3,491,927,600',
-    logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
-  },
-  {
-    name: 'Ethereum', 
-    value: '752,22', 
-    percent: '-0.34', 
-    marketCap: '122,568,750,852', 
-    circSupply: '3,491,927,600',
-    logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
-  },
-  // {
-  //   name: 'Bitcoin', 
-  //   value: '752,22', 
-  //   percent: '-0.34', 
-  //   marketCap: '122,568,750,852', 
-  //   circSupply: '3,491,927,600',
-  //   logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
-  // },
-  // {
-  //   name: 'Bitcoin', 
-  //   value: '752,22', 
-  //   percent: '-0.34', 
-  //   marketCap: '122,568,750,852', 
-  //   circSupply: '3,491,927,600',
-  //   logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
-  // },
-  // {
-  //   name: 'Bitcoin', 
-  //   value: '752,22', 
-  //   percent: '-0.34', 
-  //   marketCap: '122,568,750,852', 
-  //   circSupply: '3,491,927,600',
-  //   logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
-  // },
-  // {
-  //   name: 'Bitcoin', 
-  //   value: '752,22', 
-  //   percent: '-0.34', 
-  //   marketCap: '122,568,750,852', 
-  //   circSupply: '3,491,927,600',
-  //   logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
-  // },
+    city: 'İstanbul', 
+    temperature: '16', 
+    dayOne: {
+      dayName: 'Thursday', 
+      temperature: '23', 
+      airCondition: 'Cloudly', 
+    },
+    dayTwo: {
+      dayName: 'Friday', 
+      temperature: '28', 
+      airCondition: 'Sunny', 
+    },
+    dayOne: {
+      dayName: 'Saturday', 
+      temperature: '20', 
+      airCondition: 'Snowy', 
+    },
+    dayOne: {
+      dayName: 'Saturday', 
+      temperature: '18', 
+      airCondition: 'Sunny', 
+    }
+  } 
 ]
 
 const App = () => (
   <div className={appStyle}>  
-    <CryptoApp data={data}/> 
+    <WeatherApp data={data}/> 
   </div>
 );
 
